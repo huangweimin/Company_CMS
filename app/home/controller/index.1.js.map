@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\home\\controller\\index.1.js"
+    ],
+    "names": [
+        "indexAction",
+        "getList",
+        "data",
+        "assign",
+        "list",
+        "display"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,OAAL,CAAa,SAAb,C;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVC,sBAAKF;AADK,eAAZ;+CAGO,KAAKG,OAAL,E",
+    "file": "..\\..\\..\\src\\home\\controller\\index.1.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * index action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let data = await this.getList('article');\n    this.assign({\n      list:data\n    })\n    return this.display();\n  }\n\n}"
+    ]
+}

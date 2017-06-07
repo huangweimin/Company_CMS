@@ -4,13 +4,20 @@
         "..\\..\\..\\src\\home\\controller\\base.js"
     ],
     "names": [
+        "getArticleList",
+        "model",
+        "select",
+        "getSingleArticle",
+        "where",
+        "getArticleDetail",
+        "find",
         "think",
         "controller",
         "base"
     ],
-    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;EAE6BA,MAAMC,UAAN,CAAiBC,I",
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;AAII;qBACAA,c,6BAAiB;AACb,eAAO,KAAKC,KAAL,CAAW,SAAX,EAAsBC,MAAtB,EAAP;AACH,K;;AAED;;;qBACAC,gB,6BAAiBC,K,EAAO;AACpB,eAAO,KAAKH,KAAL,CAAW,SAAX,EAAsBG,KAAtB,CAA4BA,KAA5B,EAAmCF,MAAnC,EAAP;AACH,K;;AAED;;;qBACAG,gB,6BAAiBD,K,EAAO;AACpB,eAAO,KAAKH,KAAL,CAAW,SAAX,EAAsBG,KAAtB,CAA4BA,KAA5B,EAAmCE,IAAnC,EAAP;AACH,K;;;EAfwBC,MAAMC,UAAN,CAAiBC,I",
     "file": "..\\..\\..\\src\\home\\controller\\base.js",
     "sourcesContent": [
-        "'use strict';\n\nexport default class extends think.controller.base {\n  /**\n   * some base method in here\n   */\n}"
+        "'use strict';\n\nexport default class extends think.controller.base {\n\n    //获取全部列表\n    getArticleList() {\n        return this.model('article').select();\n    }\n\n    //获取某类列表\n    getSingleArticle(where) {\n        return this.model('article').where(where).select();\n    }\n\n    //获取文章详情\n    getArticleDetail(where) {\n        return this.model('article').where(where).find();\n    }\n\n}"
     ]
 }

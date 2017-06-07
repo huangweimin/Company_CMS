@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\home\\controller\\contact.js"
+    ],
+    "names": [
+        "indexAction",
+        "getArticleDetail",
+        "catalogId",
+        "data",
+        "assign",
+        "display"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,gBAAL,CAAsB;AACrCC,2BAAW;AAD0B,eAAtB,C;;;AAAbC,kB;;AAGJ,mBAAKC,MAAL,CAAY;AACVD,sBAAMA;AADI,eAAZ;+CAGO,KAAKE,OAAL,E",
+    "file": "..\\..\\..\\src\\home\\controller\\contact.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 联系我们 action\n   * @return {Promise} []\n   */\n  async indexAction() {\n    let data = await this.getArticleDetail({\n      catalogId: 4\n    });\n    this.assign({\n      data: data\n    })\n    return this.display();\n  }\n\n}"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\admin\\controller\\system.js"
+    ],
+    "names": [
+        "indexAction",
+        "display"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;+CACG,KAAKC,OAAL,E",
+    "file": "..\\..\\..\\src\\admin\\controller\\system.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 后台 → 系统设置 action\n   * @return {Promise} []\n   */\n  async indexAction() {\n    return this.display();\n  }\n\n}"
+    ]
+}

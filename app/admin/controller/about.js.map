@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\admin\\controller\\about.js"
+    ],
+    "names": [
+        "indexAction",
+        "getArticleDetail",
+        "catalogId",
+        "data",
+        "assign",
+        "display"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,gBAAL,CAAsB,EAACC,WAAU,CAAX,EAAtB,C;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVD,sBAAKA;AADK,eAAZ;+CAGO,KAAKE,OAAL,E",
+    "file": "..\\..\\..\\src\\admin\\controller\\about.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 关于我们 action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let data = await this.getArticleDetail({catalogId:3});\n    this.assign({\n      data:data\n    })\n    return this.display();\n  }\n\n}"
+    ]
+}

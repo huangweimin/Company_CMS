@@ -6,13 +6,13 @@
 export default {
   type: 'mysql',
   adapter: {
-    mysql: {
+      mysql: {
       host: '127.0.0.1',
-      port: '',
-      database: '',
-      user: '',
+      port: '3306',
+      database: 'test',
+      user: 'root',
       password: '',
-      prefix: '',
+      prefix: 'think_',
       encoding: 'utf8'
     },
     mongo: {

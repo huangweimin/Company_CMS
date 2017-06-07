@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>管理后台</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/Admin/css/public.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/static/Admin/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/Admin/js/global.js"></script>
+
+    <title>New ThinkJS Application</title>
+
+    <body>
+        <div id="dcWrap">
+            <div id="dcHead">
+                <div id="head">
+                    <div class="logo">
+                        <a href="/admin"><img src="/static/Admin/images/dclogo.png" alt="logo"></a>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li class="M"><a href="JavaScript:void(0);" class="topAdd">新建</a>
+                                <div class="drop mTopad"><a href="/admin/article/add">文章</a><a href="/admin/catalog/add">分类</a></div>
+                            </li>
+                            <li><a href="/" target="_blank">查看站点</a></li>
+                            <li><a href="#">清除缓存</a></li>
+                        </ul>
+                        <ul class="navRight">
+                            <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+                                <div class="drop mUser">
+                                    <a href="#">编辑我的个人资料</a>
+                                    <a href="#">设置云账户</a>
+                                </div>
+                            </li>
+                            <li class="noRight"><a href="#">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- dcHead 结束 -->
+            <div id="dcLeft">
+                <div id="menu">
+                    <ul class="top">
+                        <li><a href="/admin"><i class="home"></i><em>管理首页</em></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/admin/system"><i class="system"></i><em>系统设置</em></a></li>
+                        <li><a href="/admin/nav"><i class="nav"></i><em>自定义导航栏</em></a></li>
+                        <li><a href="/admin/banner"><i class="show"></i><em>首页幻灯广告</em></a></li>
+                        <li><a href="/admin/page"><i class="page"></i><em>单页面管理</em></a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/admin/catalog"><i class="articleCat"></i><em>文章分类</em></a></li>
+                        <li><a href="/admin/article"><i class="article"></i><em>文章列表</em></a></li>
+                    </ul>
+                    <ul class="bot">
+                        <li><a href="/admin/backup"><i class="backup"></i><em>数据备份</em></a></li>
+                        <li><a href="/admin/manager"><i class="manager"></i><em>网站管理员</em></a></li>
+                        <li><a href="/admin/log"><i class="managerLog"></i><em>操作记录</em></a></li>
+                    </ul>
+                </div>
+            </div>

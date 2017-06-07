@@ -5,11 +5,15 @@
     ],
     "names": [
         "indexAction",
+        "getArticleList",
+        "data",
+        "assign",
+        "list",
         "display"
     ],
-    "mappings": "AAAA;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIAA,W,0BAAa;AACX;AACA,WAAO,KAAKC,OAAL,EAAP;AACD,G",
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,cAAL,E;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVC,sBAAMF;AADI,eAAZ;+CAGO,KAAKG,OAAL,E",
     "file": "..\\..\\..\\src\\home\\controller\\index.js",
     "sourcesContent": [
-        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * index action\n   * @return {Promise} []\n   */\n  indexAction(){\n    //auto render template file index_index.html\n    return this.display();\n  }\n}"
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 首页 action\n   * @return {Promise} []\n   */\n  async indexAction() {\n    let data = await this.getArticleList();\n    this.assign({\n      list: data\n    })\n    return this.display();\n  }\n\n}"
     ]
 }

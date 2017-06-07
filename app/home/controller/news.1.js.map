@@ -1,0 +1,27 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\home\\controller\\news.1.js"
+    ],
+    "names": [
+        "indexAction",
+        "getSingleArticle",
+        "catalogId",
+        "data",
+        "assign",
+        "list",
+        "display",
+        "detailAction",
+        "id",
+        "get",
+        "think",
+        "statusAction",
+        "http",
+        "getArticleDetail"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,gBAAL,CAAsB,EAACC,WAAU,CAAX,EAAtB,C;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVC,sBAAKF;AADK,eAAZ;+CAGO,KAAKG,OAAL,E;;;;;;;;;;;;;;;;;AAGT;;;;;;mBAIMC,Y;;;;;;;AACAC,gB,GAAK,KAAKC,GAAL,CAAS,IAAT,C;;kBACLD,E;;;;;gDACKE,MAAMC,YAAN,CAAmB,GAAnB,EAAwB,KAAKC,IAA7B,C;;;;qBAEY,KAAKC,gBAAL,CAAsB,EAACL,IAAGA,EAAJ,EAAtB,C;;;AAAbL,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVD,sBAAKA;AADK,eAAZ;gDAGO,KAAKG,OAAL,E",
+    "file": "..\\..\\..\\src\\home\\controller\\news.1.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 新闻列表 action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let data = await this.getSingleArticle({catalogId:2});\n    this.assign({\n      list:data\n    })\n    return this.display();\n  }\n\n  /**\n   * 新闻详细 action\n   * @return {Promise} []\n   */\n  async detailAction(){\n    var id = this.get(\"id\");\n    if(!id){\n      return think.statusAction(404, this.http);\n    }else{\n        let data = await this.getArticleDetail({id:id});\n        this.assign({\n          data:data\n        })\n        return this.display();\n    }\n  }\n\n}"
+    ]
+}

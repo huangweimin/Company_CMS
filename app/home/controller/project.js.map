@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\home\\controller\\project.js"
+    ],
+    "names": [
+        "indexAction",
+        "getOneList",
+        "id",
+        "data",
+        "assign",
+        "list",
+        "display"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,UAAL,CAAgB,SAAhB,EAA0B,EAACC,IAAG,CAAJ,EAA1B,C;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVC,sBAAKF;AADK,eAAZ;+CAGO,KAAKG,OAAL,E",
+    "file": "..\\..\\..\\src\\home\\controller\\project.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * index action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let data = await this.getOneList('article',{id:1});\n    this.assign({\n      list:data\n    })\n    return this.display();\n  }\n\n}"
+    ]
+}

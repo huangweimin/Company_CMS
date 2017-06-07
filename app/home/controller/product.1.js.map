@@ -1,0 +1,26 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\home\\controller\\product.1.js"
+    ],
+    "names": [
+        "indexAction",
+        "getSingleArticle",
+        "id",
+        "data",
+        "assign",
+        "list",
+        "display",
+        "detailAction",
+        "get",
+        "think",
+        "statusAction",
+        "http",
+        "getArticleDetail"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;;qBACa,KAAKC,gBAAL,CAAsB,EAACC,IAAG,CAAJ,EAAtB,C;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVC,sBAAKF;AADK,eAAZ;+CAGO,KAAKG,OAAL,E;;;;;;;;;;;;;;;;;AAGT;;;;;;mBAIMC,Y;;;;;;;AACAL,gB,GAAK,KAAKM,GAAL,CAAS,IAAT,C;;kBACLN,E;;;;;gDACKO,MAAMC,YAAN,CAAmB,GAAnB,EAAwB,KAAKC,IAA7B,C;;;;qBAEY,KAAKC,gBAAL,CAAsB,EAACV,IAAGA,EAAJ,EAAtB,C;;;AAAbC,kB;;AACJ,mBAAKC,MAAL,CAAY;AACVD,sBAAKA;AADK,eAAZ;gDAGO,KAAKG,OAAL,E",
+    "file": "..\\..\\..\\src\\home\\controller\\product.1.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 产品列表 action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let data = await this.getSingleArticle({id:1});\n    this.assign({\n      list:data\n    })\n    return this.display();\n  }\n\n  /**\n   * 产品详细 action\n   * @return {Promise} []\n   */\n  async detailAction(){\n    var id = this.get(\"id\");\n    if(!id){\n      return think.statusAction(404, this.http);\n    }else{\n        let data = await this.getArticleDetail({id:id});\n        this.assign({\n          data:data\n        })\n        return this.display();\n    }\n  }\n\n}"
+    ]
+}

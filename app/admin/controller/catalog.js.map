@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\admin\\controller\\catalog.js"
+    ],
+    "names": [
+        "indexAction",
+        "display",
+        "addAction",
+        "editAction"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;+CACG,KAAKC,OAAL,E;;;;;;;;;;;;;;;;;AAGT;;;;;;mBAIMC,S;;;;;;gDACG,KAAKD,OAAL,E;;;;;;;;;;;;;;;;;AAGT;;;;;;mBAIME,U;;;;;;gDACG,KAAKF,OAAL,E",
+    "file": "..\\..\\..\\src\\admin\\controller\\catalog.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * 后台 → 文章分类 action\n   * @return {Promise} []\n   */\n  async indexAction() {\n    return this.display();\n  }\n\n  /**\n   * 后台 → 添加目录 action\n   * @return {Promise} []\n   */\n  async addAction() {\n    return this.display();\n  }\n\n  /**\n   * 后台 → 编辑目录 action\n   * @return {Promise} []\n   */\n  async editAction() {\n    return this.display();\n  }\n\n}"
+    ]
+}
